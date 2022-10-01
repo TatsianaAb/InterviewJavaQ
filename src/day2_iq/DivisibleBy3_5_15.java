@@ -10,9 +10,9 @@ public class DivisibleBy3_5_15 {
         Divisible by 3: divisible by 3, but not 15
         Divisible by 5: divisible by 5, but not 15
          */
-        String result15 = "";
         String result3 = "";
         String result5 = "";
+        String result15 = "";
         for (int i = 1; i <= 100; i++) {
             if (i % 3 == 0 && i % 5 == 0 && i % 15 == 0) {
                 result15 += i + " ";
