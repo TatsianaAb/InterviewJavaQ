@@ -19,7 +19,7 @@ prime or not
     }
 
     public static void main(String[] args) {
-        System.out.println(PrimeNumber.isPrime(18));
+        System.out.println(PrimeNumber.isPrime(2));
     }
 }
 
