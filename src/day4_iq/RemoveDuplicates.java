@@ -14,7 +14,7 @@ Ex: removeDup("AAABBBCCC") ==> ABC
         String result = "";
         for (int i = 0; i < str.length(); i++) {
             char each = str.charAt(i);//to get each char of the String
-            if (!result.contains((each + ""))) {
+            if (!result.contains(each + "")) {
                 result += each;
             }
         }
