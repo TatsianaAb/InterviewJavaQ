@@ -11,7 +11,7 @@ Given alphanumeric String, we need to split the string into substrings
 of consecutive letters or numbers, sort the individual string and
 append them back together
 Ex:
-Input: "DC501GCCCA098911"
+Input: "50DC1GCCCA098911"
 OutPut: "CD015ACCCG011899"
      */
 
@@ -38,7 +38,7 @@ OutPut: "CD015ACCCG011899"
                 subStr.add(str2);
             }
         }
-        //System.out.println(subStr);
+        System.out.println(subStr);
         String output = "";
 
         for (String eachSub : subStr) { //creating a loop to iterate through ArrayList subStr
@@ -51,7 +51,6 @@ OutPut: "CD015ACCCG011899"
         }
         return output;
     }
-
     public static void main(String[] args) {
 
         String sortedStr = SortLettersAndNumbers.sortAlphanumericString("DC501GCCCA098911");

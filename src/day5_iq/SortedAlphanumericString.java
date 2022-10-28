@@ -32,6 +32,7 @@ public class SortedAlphanumericString {
                 subStr.add(str2);
             }
         }
+
         System.out.println(subStr);
 
         String output = "";
