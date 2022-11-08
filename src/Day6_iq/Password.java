@@ -13,7 +13,7 @@ Write a return method that can verify if a password is valid or not. Requirement
      */
 
 
-    public static boolean verifyPassword(String password) {
+    public static boolean isValidPassword(String password) {
         int totalChars = password.length();
         int countUpper = 0;
         int countLower = 0;
@@ -30,7 +30,7 @@ Write a return method that can verify if a password is valid or not. Requirement
                 countLower++;
             } else if (Character.isDigit(each)) {
                 countDigits++;
-            } else if (each.equals('-') || each.equals('+')) {
+            } else if (each.equals('-') || each.equals('+') || each.equals(' ')) {
                 countNegativeOrPlusSigns++;
             } else {
                 countSpecial++;
@@ -39,19 +39,19 @@ Write a return method that can verify if a password is valid or not. Requirement
 
         if (totalChars >= 6 && countUpper >= 1 && countLower >= 1 && countDigits >= 1 && countSpecial >= 1 && countNegativeOrPlusSigns == 0) {
             return true;
-
         }
         return false;
     }
 
     public static void main(String[] args) {
 
-        System.out.println(Password.verifyPassword("Hello1234@"));
-        System.out.println(Password.verifyPassword("123456"));
-        System.out.println(Password.verifyPassword("hello"));
-        System.out.println(Password.verifyPassword(""));
-        System.out.println(Password.verifyPassword("-1#Hello"));
-        System.out.println(Password.verifyPassword("+1234Hello&"));
+        System.out.println(Password.isValidPassword("Hello1234@"));
+        System.out.println(Password.isValidPassword("123456"));
+        System.out.println(Password.isValidPassword("hello"));
+        System.out.println(Password.isValidPassword(""));
+        System.out.println(Password.isValidPassword("-1#Hello"));
+        System.out.println(Password.isValidPassword("+1234Hello&"));
+        System.out.println(Password.isValidPassword("---+++Hello@"));
 
 
     }
