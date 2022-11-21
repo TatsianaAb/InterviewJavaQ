@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ArraySortInDescendingOrder {
 
     public static int[] sortArrayInDescendingOrder(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
+        for (int i = 0; i < array.length - 1; i++) {//i: -1 i++ makes i = 0 at the next step
             if (array[i] < array[i + 1]) {
                 int temp = array[i];
                 array[i] = array[i+1];
